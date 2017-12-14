@@ -25,6 +25,8 @@
 		<log4j.version>1.2.16</log4j.version>
 		<slf4j-api.version>1.7.7</slf4j-api.version>
 		<slf4j-log4j12.version>1.7.7</slf4j-log4j12.version>
+		
+		<drools.version>6.5.0.Final</drools.version>
 	</properties>
 	<build>
 		<plugins>
@@ -40,15 +42,22 @@
 	</build>
 
 	<dependencies>
+		<!-- drools核心配置 -->
 		<dependency>
 			<groupId>org.drools</groupId>
 			<artifactId>drools-core</artifactId>
-			<version>6.5.0.Final</version>
+			<version>${drools.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.drools</groupId>
 			<artifactId>drools-compiler</artifactId>
-			<version>6.5.0.Final</version>
+			<version>${drools.version}</version>
+		</dependency>
+		<!-- drools与spring整合 -->
+		<dependency>
+		    <groupId>org.kie</groupId>
+		    <artifactId>kie-spring</artifactId>
+		    <version>${drools.version}</version>
 		</dependency>
 
 		<!-- 日志 -->
